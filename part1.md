@@ -45,7 +45,25 @@ const getDiscountedProductAveragePrice = (inventory: Product[]): number => {
 
   return discountedPriceSum / discountedProductsCount;
 };
+```
 
+This function uses an imperative approach withV loops and conditional statements.
+
+Refactor the function `getDiscountedProductAveragePrice` to adhere to the Functional Programming paradigm. Utilize the built-in array methods `map`, `filter`, and `reduce` to achieve the same functionality without explicit iteration and conditional checks.
+Write the new function under the name `getDiscountedProductAveragePriceFP`.
+
+**Important**: the new function should have the same signature.
+
+**Note**: there are no tests for this question, and it will not be executed. The task here is to write the code in a functional way.
+
+
+**Answer:**
+```ts
+type Product = {
+  name: string;
+  price: number;
+  discounted: boolean;
+};
 //ANSWER
 const getDiscountedProductAveragePriceFP = (inventory: Product[]): number => {
   //only discounted products:
@@ -58,22 +76,8 @@ const getDiscountedProductAveragePriceFP = (inventory: Product[]): number => {
   let sum = prices.reduce((acc,curr) => acc+curr,0);
   const avg = (count===0) ? 0 : (sum/count);
   return avg;
-
 };
 ```
-
-This function uses an imperative approach withV loops and conditional statements.
-
-Refactor the function `getDiscountedProductAveragePrice` to adhere to the Functional Programming paradigm. Utilize the built-in array methods `map`, `filter`, and `reduce` to achieve the same functionality without explicit iteration and conditional checks.
-Write the new function under the name `getDiscountedProductAveragePriceFP`.
-
-**Important**: the new function should have the same signature.
-
-**Note**: there are no tests for this question, and it will not be executed. The task here is to write the code in a functional way.
-
-**Answer: is above in the code text**
-
-
 
 
 ### [18 points] Question 1.3
@@ -86,9 +90,16 @@ Guidelines:
 - Use generics where possible.
 - Avoid using `any`.
 
-1. [3 points] `(x, y) => x.some(y)`
-2. [3 points] `x => x.map(y => y * 2)`
-3. [3 points] `(x, y) => x.filter(y)`
-4. [3 points] `x => x.reduce((acc, cur) => acc + cur, 0)`
-5. [3 points] `(x, y) => x ? y[0] : y[1]`
-6. [3 points] `(f,g) => x => f(g(x+1))`
+
+1. [3 points] `(x, y) => x.some(y)`  
+**Answer:**  `<T>(x: T[], y: (x: T) => boolean) => boolean`
+2. [3 points] `x => x.map(y => y * 2)`  
+**Answer:** `(x: number[]) => number[]`
+3. [3 points] `(x, y) => x.filter(y)`  
+**Answer:** `<T>(x: T[], y: (item: T) => boolean) => T1[]`
+4. [3 points] `x => x.reduce((acc, cur) => acc + cur, 0)`  
+**Answer:** ``
+5. [3 points] `(x, y) => x ? y[0] : y[1]`  
+**Answer:** ``
+6. [3 points] `(f,g) => x => f(g(x+1))`  
+**Answer:** ``
