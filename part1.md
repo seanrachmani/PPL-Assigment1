@@ -6,16 +6,16 @@ Submit the solution to this part as `part1.md`.
 
 1. Explain in simple words the following programming paradigms:
    1. [5 points] Imperative:
-   **Answer:** A program is a sequence of commands that being executed one by one. 
+   **Answer:** A program is a sequence of commands that are executed one by one. 
    1. [5 points] Object Oriented
-   **Answer**: Based on objects. each object which represented by A Class has saved data-characteristics(fields) and methods. the execution effected by the methods that being executed directly on specific object and using his fields/changing it.
+   **Answer**: Based on objects. each object which is represented by A Class has saved data-characteristics(fields) and methods. the execution driven by the methods that are executed directly on specific object and using it fields/changing it.
    1. [5 points] Functional
-   **Answer:** A program is an expression that being executed by evaluation of the expression value.furthermore, functions are expressions and can be sent as parameters to other functions. lastly, functions has no side effects: any function only takes inout and returns value. it doesn't change any variable(assignment) or data structure(mutation), printing to the ecrren stc.
+   **Answer:** A program is an expression that being executed by evaluation of the expression value. Furthermore, functions are expressions and can be sent as parameters to other functions. lastly, functions have no side effects: any function only takes input and returns value. it doesn't change any variable(assignment) or data structure(mutation), printing to the screen, etc.
 
 1. [5 points] How does the object oriented paradigm improve over the imperative paradigm?
-**Answer:** First,it help us categorize and maintain our code by units(objects), which is more oragnized. Second, it's more secure since we can define object's fields to be private which helps prevent outside changes of the object info(fields).Furthermore, it helps us avoid code repetiton, since we can making some object(1) inherit other object(2) which leads to the inherited object(1) having all fields and methods of obejct(2) without duplicate code, which often done by impartive programming for similiar procedures.
+**Answer:** First, it helps us categorize and maintain our code by units(objects), which is more organized. Second, it's more secure since we can define object's fields to be private which helps prevent outside changes of the object info(fields).Furthermore, it helps us avoid code repetition, since we can make some object(1) inherit other object(2) which leads to the inherited object(1) having all fields and methods of object(2) without duplicate code, which is often done by imperative programming for similiar procedures.
 1. [5 points] How does the functional paradigm improve over the object oriented paradigm?
-**Aanswer:** Functional programming is easier to test since it has no side effects, which object oriented has(object state can be changed). In addition since there is no mutation in FP we dont have to worry about shared resources and concurency. 
+**Answer:** Functional programming is easier to test since it has no side effects, which object oriented has(object state can be changed). In addition since there is no mutation in FP we don't have to worry about shared resources and concurrency. 
 
 ### [10 points] Question 1.2
 
