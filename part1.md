@@ -102,5 +102,4 @@ Guidelines:
 5. [3 points] `(x, y) => x ? y[0] : y[1]`  
 **Answer:** `<T>(x: boolean, y: T[]) => T`
 6. [3 points] `(f,g) => x => f(g(x+1))`  
-**Answer:** `<T1,T2>(f: (item: T1) => T2, g: (num: number) => T1) =>   
-((x: number) => T2)`
+**Answer:** `<T1,T2>(f: (item: T1) => T2, g: (num: number) => T1) => ((x: number) => T2)`
