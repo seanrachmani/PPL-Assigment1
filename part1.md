@@ -5,16 +5,16 @@ Submit the solution to this part as `part1.md`.
 ### [25 points] Question 1.1
 
 1. Explain in simple words the following programming paradigms:
-   1. [5 points] Imperative:
+   1. [5 points] Imperative:  
    **Answer:** A program is a sequence of commands that are executed one by one. 
-   1. [5 points] Object Oriented
+   1. [5 points] Object Oriented  
    **Answer**: Based on objects. each object which is represented by A Class has saved data-characteristics(fields) and methods. the execution driven by the methods that are executed directly on specific object and using it fields/changing it.
-   1. [5 points] Functional
+   1. [5 points] Functional  
    **Answer:** A program is an expression that being executed by evaluation of the expression value. Furthermore, functions are expressions and can be sent as parameters to other functions. lastly, functions have no side effects: any function only takes input and returns value. it doesn't change any variable(assignment) or data structure(mutation), printing to the screen, etc.
 
-1. [5 points] How does the object oriented paradigm improve over the imperative paradigm?
+1. [5 points] How does the object oriented paradigm improve over the imperative paradigm?  
 **Answer:** First, it helps us categorize and maintain our code by units(objects), which is more organized. Second, it's more secure since we can define object's fields to be private which helps prevent outside changes of the object info(fields).Furthermore, it helps us avoid code repetition, since we can make some object(1) inherit other object(2) which leads to the inherited object(1) having all fields and methods of object(2) without duplicate code, which is often done by imperative programming for similiar procedures.
-1. [5 points] How does the functional paradigm improve over the object oriented paradigm?
+1. [5 points] How does the functional paradigm improve over the object oriented paradigm?  
 **Answer:** Functional programming is easier to test since it has no side effects, which object oriented has(object state can be changed). In addition since there is no mutation in FP we don't have to worry about shared resources and concurrency. 
 
 ### [10 points] Question 1.2
@@ -45,6 +45,21 @@ const getDiscountedProductAveragePrice = (inventory: Product[]): number => {
 
   return discountedPriceSum / discountedProductsCount;
 };
+
+//ANSWER
+const getDiscountedProductAveragePriceFP = (inventory: Product[]): number => {
+  //only discounted products:
+  let discountedInv = inventory.filter(x=> x.discounted === true);
+  //count:
+  const count = discountedInv.length;
+  //get products price:
+  let prices = discountedInv.map(x => x.price);
+  //accumulate the price
+  let sum = prices.reduce((acc,curr) => acc+curr,0);
+  const avg = (count===0) ? 0 : (sum/count);
+  return avg;
+
+};
 ```
 
 This function uses an imperative approach withV loops and conditional statements.
@@ -55,6 +70,11 @@ Write the new function under the name `getDiscountedProductAveragePriceFP`.
 **Important**: the new function should have the same signature.
 
 **Note**: there are no tests for this question, and it will not be executed. The task here is to write the code in a functional way.
+
+**Answer: is above in the code text**
+
+
+
 
 ### [18 points] Question 1.3
 
