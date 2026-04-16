@@ -8,7 +8,7 @@ Submit the solution to this part as `part1.md`.
    1. [5 points] Imperative:  
    **Answer:** A program is a sequence of commands that are executed one by one. 
    1. [5 points] Object Oriented  
-   **Answer**: Based on objects. each object which is represented by A Class has saved data-characteristics(fields) and methods. the execution driven by the methods that are executed directly on specific object and using it fields/changing it.
+   **Answer**: Based on objects. each object which is represented by A Class has saved data-characteristics(fields) and methods. the execution driven by the methods that are executed directly on specific object and using it fields/changing them.
    1. [5 points] Functional  
    **Answer:** A program is an expression that being executed by evaluation of the expression value. Furthermore, functions are expressions and can be sent as parameters to other functions. lastly, functions have no side effects: any function only takes input and returns value. it doesn't change any variable(assignment) or data structure(mutation), printing to the screen, etc.
 
@@ -92,14 +92,15 @@ Guidelines:
 
 
 1. [3 points] `(x, y) => x.some(y)`  
-**Answer:**  `<T>(x: T[], y: (x: T) => boolean) => boolean`
+**Answer:**  `<T>(x: T[], y: (item: T) => boolean) => boolean`
 2. [3 points] `x => x.map(y => y * 2)`  
 **Answer:** `(x: number[]) => number[]`
 3. [3 points] `(x, y) => x.filter(y)`  
-**Answer:** `<T>(x: T[], y: (item: T) => boolean) => T1[]`
+**Answer:** `<T>(x: T[], y: (item: T) => boolean) => T[]`
 4. [3 points] `x => x.reduce((acc, cur) => acc + cur, 0)`  
-**Answer:** ``
+**Answer:** `(x: number[]) => number`
 5. [3 points] `(x, y) => x ? y[0] : y[1]`  
-**Answer:** ``
+**Answer:** `<T>(x: boolean, y: T[]) => T`
 6. [3 points] `(f,g) => x => f(g(x+1))`  
-**Answer:** ``
+**Answer:** `<T1,T2>(f: (item: T1) => T2, g: (num: number) => T1) =>   
+((x: number) => T2)`
