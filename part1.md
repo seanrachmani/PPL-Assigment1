@@ -5,10 +5,15 @@ Submit the solution to this part as `part1.md`.
 ### [25 points] Question 1.1
 
 1. Explain in simple words the following programming paradigms:
-   1. [5 points] Imperative
+   1. [5 points] Imperative:
+   **Answer:** A program is a sequence of commands that being executed one by one. 
    1. [5 points] Object Oriented
+   **Answer**: Based on objects. each object which represented by A Class has saved data-characteristics(fields) and methods. the execution effected by the methods that being executed directly on specific object and using his fields/changing it.
    1. [5 points] Functional
+   **Answer:** A program is an expression that being executed by evaluation of the expression value.furthermore, functions are expressions and can be sent as parameters to other functions. lastly, functions has no side effects: any function only takes inout and returns value. it doesn't change any variable(assignment) or data structure(mutation), printing to the ecrren stc.
+
 1. [5 points] How does the object oriented paradigm improve over the imperative paradigm?
+**Answer:** 
 1. [5 points] How does the functional paradigm improve over the object oriented paradigm?
 
 ### [10 points] Question 1.2
@@ -41,7 +46,7 @@ const getDiscountedProductAveragePrice = (inventory: Product[]): number => {
 };
 ```
 
-This function uses an imperative approach with loops and conditional statements.
+This function uses an imperative approach withV loops and conditional statements.
 
 Refactor the function `getDiscountedProductAveragePrice` to adhere to the Functional Programming paradigm. Utilize the built-in array methods `map`, `filter`, and `reduce` to achieve the same functionality without explicit iteration and conditional checks.
 Write the new function under the name `getDiscountedProductAveragePriceFP`.
