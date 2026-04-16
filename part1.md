@@ -13,8 +13,9 @@ Submit the solution to this part as `part1.md`.
    **Answer:** A program is an expression that being executed by evaluation of the expression value.furthermore, functions are expressions and can be sent as parameters to other functions. lastly, functions has no side effects: any function only takes inout and returns value. it doesn't change any variable(assignment) or data structure(mutation), printing to the ecrren stc.
 
 1. [5 points] How does the object oriented paradigm improve over the imperative paradigm?
-**Answer:** 
+**Answer:** First,it help us categorize and maintain our code by units(objects), which is more oragnized. Second, it's more secure since we can define object's fields to be private which helps prevent outside changes of the object info(fields).Furthermore, it helps us avoid code repetiton, since we can making some object(1) inherit other object(2) which leads to the inherited object(1) having all fields and methods of obejct(2) without duplicate code, which often done by impartive programming for similiar procedures.
 1. [5 points] How does the functional paradigm improve over the object oriented paradigm?
+**Aanswer:** Functional programming is easier to test since it has no side effects, which object oriented has(object state can be changed). In addition since there is no mutation in FP we dont have to worry about shared resources and concurency. 
 
 ### [10 points] Question 1.2
 
