@@ -20,7 +20,7 @@ export const countVowels: (s: string) => number = R.pipe(R.toLower,stringToArray
 //pipe returns function that takes s 
 const cleanString: (s: string) => string = R.pipe(R.toLower,R.replace(/[^a-z0-9]/g,""));
 /*actual function:*/
-export const isPalindrome: (text: string) => boolean =(text: string) =>{
+export const isPalindrome: (text: string) => boolean = (text: string): boolean =>{
     const clean: string = cleanString(text);
     return R.equals(clean,R.reduce((acc: string, curr: string) => curr + acc ,"", stringToArray(clean)));
 };
@@ -33,7 +33,7 @@ export type WordTree = {
     children: WordTree[];
 }
 
-export const treeToSentence: (t: WordTree) => string = (t: WordTree) => {
+export const treeToSentence: (t: WordTree) => string = (t: WordTree): string => {
     //a new array with the words we need to concat:
     const array: string[] =R.prepend(t.root,R.map(treeToSentence,t.children));
     return R.join(" ",array);
