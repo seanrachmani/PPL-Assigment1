@@ -22,7 +22,7 @@ const cleanString: (s: string) => string = R.pipe(R.toLower,R.replace(/[^a-z0-9]
 /*actual function:*/
 export const isPalindrome: (text: string) => boolean =(text: string) =>{
     const clean: string = cleanString(text);
-    return R.equals(R.slice(0,((clean.length)/2),clean),R.slice((clean.length/2),clean.length,clean));
+    return R.equals(clean,R.reduce((acc: string, curr: string) => curr + acc ,"", stringToArray(clean)));
 };
   
 
