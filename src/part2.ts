@@ -22,10 +22,10 @@ const cleanString: (s: string) => string = R.pipe(R.toLower,R.replace(/[^a-z0-9]
 /*actual function:*/
 export const isPalindrome: (text: string) => boolean =(text: string) =>{
     const clean: string = cleanString(text);
-    const reversed: string = R.reverse(clean);
-    return R.equals(clean,reversed);
+    return R.equals(R.slice(0,((clean.length)/2),clean),R.slice((clean.length/2),clean.length,clean));
 };
   
+
 
 /* Question 2.3 */
 export type WordTree = {
