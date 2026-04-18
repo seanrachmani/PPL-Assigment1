@@ -66,16 +66,16 @@ type Product = {
 };
 //ANSWER
 const getDiscountedProductAveragePriceFP = (inventory: Product[]): number => {
-  //only discounted products:
-  let discountedInv = inventory.filter(x=> x.discounted === true);
-  //count:
-  const count = discountedInv.length;
-  //get products price:
-  let prices = discountedInv.map(x => x.price);
-  //accumulate the price
-  let sum = prices.reduce((acc,curr) => acc+curr,0);
-  const avg = (count===0) ? 0 : (sum/count);
-  return avg;
+//only discounted products:
+const discountedInv = inventory.filter(x=> x.discounted === true);
+//count:
+const count = discountedInv.length;
+//get products price:
+const prices = discountedInv.map(x => x.price);
+//accumulate the price
+const sum = prices.reduce((acc,curr) => acc+curr,0);
+const avg = (count===0) ? 0 : (sum/count);
+return avg;
 };
 ```
 
