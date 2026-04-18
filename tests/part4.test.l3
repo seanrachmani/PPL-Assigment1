@@ -26,6 +26,15 @@
             (check-equal? (rotate-nth '(hello world) 1) '(world hello))
             (check-equal? (rotate-nth '(x y z) 0) '(x y z))
         )
+
+        (test-suite "deep-reverse"
+            (check-equal? (deep-reverse '()) '())
+            (check-equal? (deep-reverse '(1 2 3)) '(3 2 1))
+            (check-equal? (deep-reverse '(1 (2 3) (4 5))) '((5 4) (3 2) 1))
+            (check-equal? (deep-reverse '((a b) c (d (e f)))) '(((f e) d) c (b a)))
+            ; טסט מיוחד לבדיקת היחס לזוג מנוקד (לא הופך מבפנים)
+            (check-equal? (deep-reverse '(1 (2 . 3) 4)) '(4 (2 . 3) 1)) 
+        )
     )
 )
 
