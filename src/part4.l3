@@ -1,15 +1,64 @@
+#lang racket
+
+
+
+; Signature: last-item(lst)
+; Type: [List(T) -> T]
+; Purpose: return the last item in the list
+; Pre-conditions: the list is not empty
+; Tests: (last-item '(5)) => 5
 (define last-item
   (λ (lst)
-    'todo))
+    (if (empty? (cdr lst))
+	(car lst)
+	(last-item (cdr lst)))))
 
+
+
+
+; Signature: remove-last-item(lst)
+; Type: [List(T) -> List(T)]
+; Purpose: return the list without the last item
+; Pre-conditions: the list is not empty
+; Tests: (remove-last-item '((a b) (c d) (e f))) => '((a b) (c d))
 (define remove-last-item
   (λ (lst)
-    'todo))
+    (if (empty? (cdr lst))
+        '()
+        (cons (car lst)(remove-last-item(cdr lst))))))
+    
 
+
+
+
+
+; Signature: rotate-nth(lst n)
+; Type: [List(T) * Number -> list(T)]
+; Purpose: rotate the list n times to the right(takes the last element and making him first n times)
+; Pre-conditions:n is non-negative natural number
+; Tests: (rotate-nth '() 555) => '()
+        ;(rotate-nth '(1 2 3) 1) => (3 1 2)
+         
 (define rotate-nth
   (λ (lst n)
-   'todo))
+    (if (empty? lst)
+        lst
+        (if (= n 0)
+            lst
+            (rotate-nth
+             (cons (last-item lst)(remove-last-item lst)) (- n 1))))))
+    
+        
 
+; Signature:
+; Type:
+; Purpose:
+; Pre-conditions:
+; Tests:
 (define deep-reverse
   (λ (l)
-    'todo))
+    (if(empty? l)
+     l
+    (if (list? l)
+    (cons (deep-reverse (cdr l)) (deep-reverse (car l)))
+     l))))
